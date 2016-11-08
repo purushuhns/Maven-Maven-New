@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RF.FaultInvalidparameters">
+    <DisplayName>RF.FaultInvalidparameters</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">
+             {"code":400, "message":"Request body cannot be empty"}
+            </Payload>
+            <StatusCode>400</StatusCode>
+            <ReasonPhrase>Bad request</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

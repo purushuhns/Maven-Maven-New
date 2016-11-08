@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GetOAuthV2Info async="false" continueOnError="false" enabled="true" name="GOA.GetOAuthAttributes">
+    <DisplayName>GOA.GetOAuthAttributes</DisplayName>
+    <!--<RefreshToken ref="request.formparam.refreshtoken"/>-->
+    <RefreshToken ref="request.formparam.refreshtoken"/>
+    <IgnoreAccessTokenStatus>true</IgnoreAccessTokenStatus>
+</GetOAuthV2Info>

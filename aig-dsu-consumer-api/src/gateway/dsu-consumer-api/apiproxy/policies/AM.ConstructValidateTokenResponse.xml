@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM.ConstructValidateTokenResponse">
+    <DisplayName>AM.ConstructValidateTokenResponse</DisplayName>
+    <AssignTo createNew="true" transport="http" type="response"/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Set>
+        <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">
+            {
+                "token_type": "%token_type#",
+                "access_token":"%apigee.access_token#",
+                "expires_in":"%expires_in#",
+                "refresh_token":"%refresh_token#",
+                "refresh_token_expires_in" : "%refresh_token_expires_in#",
+                "refresh_count": "%refresh_count#",
+                "refresh_token_issued_at": "%refresh_token_issued_at#",
+                "status": "%status#",
+                "refresh_token_status": "%refresh_token_status#",
+                "clientip": "%accesstoken.clientIP#"
+            }
+            
+        </Payload>
+    </Set>
+</AssignMessage>

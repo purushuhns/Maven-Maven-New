@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <FaultRules>
+        <FaultRule name="JSFaultHandler">
+            <Step>
+                <Name>JS.FaultHandler</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>KVM.GetTarget</Name>
+                <Condition>backendAppEnv != null</Condition>
+            </Step>
+            <Step>
+                <Name>RF.FaultInvalidEnvironment</Name>
+                <Condition>(backendAppEnv != null and (url = "" or url = null))</Condition>
+            </Step>
+            <Step>
+                <Name>KVM.GetDefaultTargetUrl</Name>
+                <Condition>backendAppEnv = null or backendAppEnv = "" </Condition>
+            </Step>
+            <Step>
+                <Name>JS.RewriteUrl</Name>
+            </Step>
+            <Step>
+                <Name>AM.ModifyParameters</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows/>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>http://dlccasdigdsu04.r1-core.r1.aig.net:8081/dsu/api/latest/rs/users</URL>
+    </HTTPTargetConnection>
+</TargetEndpoint>

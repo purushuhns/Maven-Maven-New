@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="OA.InvalidateAccessToken">
+    <DisplayName>OA.InvalidateAccessToken</DisplayName>
+    <Operation>InvalidateToken</Operation>
+    <Tokens>
+        <Token type="accesstoken" cascade="true">request.formparam.token</Token>
+    </Tokens>
+    <GenerateResponse enabled="true"/>
+    <GenerateErrorResponse enabled="true"/>
+</OAuthV2>

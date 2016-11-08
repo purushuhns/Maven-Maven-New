@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM.CarrierCarRentalsListRequest">
+    <DisplayName>AM.CarrierCarRentalsListRequest</DisplayName>
+    <Properties/>
+    <!--Remove>
+        <Headers>
+            <Header name="h1"/>
+        </Headers>
+        <QueryParams>
+            <QueryParam name="q1"/>
+        </QueryParams>
+        <FormParams>
+            <FormParam name="f1"/>
+        </FormParams>
+        <Payload/>
+    </Remove-->
+    <Set>
+        <Headers>
+            <Header name="Content-Type">application/soap+xml; charset=utf-8</Header>
+        </Headers>
+        <Verb>POST</Verb>
+        <Payload>
+            <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+                <s:Header>
+                    <a:Action s:mustUnderstand="1">http://webservices.travelguard.com/CarrierService/2010/11/ICarrierService/GetSimpleCarrierList</a:Action>
+                    <a:MessageID>urn:uuid:9455ee68-bc4d-4e6a-9174-fb2000c18e24</a:MessageID>
+                    <a:ReplyTo>
+                        <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+                    </a:ReplyTo>
+                    <a:To s:mustUnderstand="1">https://freedom.dev.travelguard.net/ListService/CarrierWebService.svc</a:To>
+                </s:Header>
+                <s:Body>
+                    <GetSimpleCarrierList xmlns="http://webservices.travelguard.com/CarrierService/2010/11">
+                        <ctCarrierType>CarRental</ctCarrierType>
+                    </GetSimpleCarrierList>
+                </s:Body>
+            </s:Envelope>
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

@@ -1,0 +1,84 @@
+{
+    "configurations": [
+        {
+            "name": "test",
+            "policies": [
+                {
+                    "name": "SA.SetRateLimit.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/SpikeArrest/Rate",
+                            "value": "30ps"
+                        }
+                    ]
+                }
+            ],
+            "proxies": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/ssp/dsu/v1"
+                        },
+						{
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/VirtualHost",
+                            "value": "default"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
+                            "value": "http://dlccasdigdsu04.r1-core.r1.aig.net:8081/dsu/api/latest/rs/users"
+                        }
+                    ]
+                }
+            ]
+        },
+		        {
+            "name": "digital-qa",
+            "policies": [
+                {
+                    "name": "SA.SetRateLimit.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/SpikeArrest/Rate",
+                            "value": "30ps"
+                        }
+                    ]
+                }
+            ],
+            "proxies": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/ssp/dsu/v1"
+                        },
+						{
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/VirtualHost",
+                            "value": "default"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
+                            "value": "http://dlccasdigdsu04.r1-core.r1.aig.net:8081/dsu/api/latest/rs/users"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

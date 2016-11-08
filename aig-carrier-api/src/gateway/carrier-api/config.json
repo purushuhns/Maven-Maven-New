@@ -1,0 +1,84 @@
+{
+    "configurations": [
+        {
+            "name": "test",
+            "policies": [
+                {
+                    "name": "SA.SetRateLimit.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/SpikeArrest/Rate",
+                            "value": "30ps"
+                        }
+                    ]
+                }
+            ],
+            "proxies": [
+                {
+                    "name": "Carrier Proxy endpoint.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/carrier/v1"
+                        },
+						{
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/VirtualHost",
+                            "value": "default"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "Carrier Target endpoint.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
+                            "value": "https://freedom.dev.travelguard.net/listservice/carrierwebservice.svc"
+                        }
+                    ]
+                }
+            ]
+        },
+		        {
+            "name": "travel-dev",
+            "policies": [
+                {
+                    "name": "SA.SetRateLimit.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/SpikeArrest/Rate",
+                            "value": "30ps"
+                        }
+                    ]
+                }
+            ],
+            "proxies": [
+                {
+                    "name": "Carrier Proxy endpoint.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/carrier/v1"
+                        },
+						{
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/VirtualHost",
+                            "value": "default"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "Carrier Target endpoint.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
+                            "value": "https://freedom.dev.travelguard.net/listservice/carrierwebservice.svc"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

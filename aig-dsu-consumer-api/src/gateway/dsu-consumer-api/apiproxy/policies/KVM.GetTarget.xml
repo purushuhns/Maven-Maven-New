@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KVM.GetTarget" mapIdentifier="DSUEndpoint">
+    <DisplayName>KVM.GetTarget</DisplayName>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+    <Get assignTo="url">
+        <Key>
+            <Parameter ref="backendAppEnv"/>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

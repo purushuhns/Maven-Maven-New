@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Quota async="false" continueOnError="false" enabled="true" name="QU.SetQuota" type="calendar">
+    <DisplayName>QU.SetQuota</DisplayName>
+    <Properties/>
+    <Allow count="1" countRef="verifyapikey.VAK.VerifyAPIKey.apiproduct.developer.quota.limit"/>
+    <Interval ref="verifyapikey.VAK.VerifyAPIKey.apiproduct.developer.quota.interval">1</Interval>
+    <TimeUnit ref="verifyapikey.VAK.VerifyAPIKey.apiproduct.developer.quota.timeunit">minute</TimeUnit>
+    <Identifier ref="verifyapikey.VAK.VerifyAPIKey.client_id"/>
+    <Distributed>true</Distributed>
+    <Synchronous>true</Synchronous>
+    <StartTime>2016-7-26 12:00:00</StartTime>
+</Quota>

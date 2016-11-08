@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><APIProxy name="carrier-api" revision="19">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1477653149038</CreatedAt>
+    <CreatedBy>Irem.Fiza@aig.com</CreatedBy>
+    <Description>phallasi git: 0c1a6854 PW7AM1XDPC21488</Description>
+    <DisplayName>carrier-api</DisplayName>
+    <LastModifiedAt>1477653149038</LastModifiedAt>
+    <LastModifiedBy>Irem.Fiza@aig.com</LastModifiedBy>
+    <Policies>
+        <Policy>AM.CarrierAirlineListRequest</Policy>
+        <Policy>AM.CarrierCarRentalsListRequest</Policy>
+        <Policy>AM.CarrierCruiseLineListRequest</Policy>
+        <Policy>AM.CarrierFinancialDefaultRequest</Policy>
+        <Policy>AM.CarrierNoCoverageRequest</Policy>
+        <Policy>AM.CarrierStrikeListRequest</Policy>
+        <Policy>AM.CarrierTourOperatorsListRequest</Policy>
+        <Policy>AM.RemoveParameters</Policy>
+        <Policy>EV.ExtractParameters</Policy>
+        <Policy>JS.CreateResponse</Policy>
+        <Policy>JS.FaultHandler</Policy>
+        <Policy>JS.RewriteUrl</Policy>
+        <Policy>KVM.GetDefaultTarget</Policy>
+        <Policy>KVM.GetTargetUrl</Policy>
+        <Policy>QU.ImposeQuota</Policy>
+        <Policy>RF.IncorrectEnvironment</Policy>
+        <Policy>RF.ParametersNotFound</Policy>
+        <Policy>RF.UnknownResource</Policy>
+        <Policy>SA.SetRateLimit</Policy>
+        <Policy>VAK.VerifyApiKey</Policy>
+        <Policy>XTJ.ConvertToJson</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>Carrier Proxy endpoint</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://CreateResponse.js</Resource>
+        <Resource>jsc://FaultHandler.js</Resource>
+        <Resource>jsc://RewriteUrl.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>Carrier Target endpoint</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

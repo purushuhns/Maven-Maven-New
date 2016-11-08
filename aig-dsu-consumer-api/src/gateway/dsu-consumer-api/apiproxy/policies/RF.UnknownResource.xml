@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RF.UnknownResource">
+    <DisplayName>RF.UnknownResource</DisplayName>
+    <FaultResponse>
+        <Set>
+            <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">
+              {"code":404, "message":"Requested resource is not available."}
+             </Payload>
+            <StatusCode>404</StatusCode>
+            <ReasonPhrase>Not Found</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

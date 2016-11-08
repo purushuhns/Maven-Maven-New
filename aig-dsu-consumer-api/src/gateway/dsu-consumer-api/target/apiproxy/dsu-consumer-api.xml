@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><APIProxy name="dsu-consumer-api" revision="12">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1476779951401</CreatedAt>
+    <CreatedBy>Sujnana.Rai@aig.com</CreatedBy>
+    <Description>phallasi git: 0c1a6854 PW7AM1XDPC21488</Description>
+    <DisplayName>dsu-consumer-API</DisplayName>
+    <LastModifiedAt>1477643296670</LastModifiedAt>
+    <LastModifiedBy>Sujnana.Rai@aig.com</LastModifiedBy>
+    <Policies>
+        <Policy>AM.ConstructDSUSessionPostRequest</Policy>
+        <Policy>AM.ConstructInvalidateTokenResponse</Policy>
+        <Policy>AM.ConstructValidateTokenResponse</Policy>
+        <Policy>AM.GenericAssignVariables</Policy>
+        <Policy>AM.ModifyParameters</Policy>
+        <Policy>AM.SetDSUProtectedHeaders</Policy>
+        <Policy>EV.ExtractGenericAttributes</Policy>
+        <Policy>GOA.GetOAuthAttributes</Policy>
+        <Policy>JS.ConstructTokenResponse</Policy>
+        <Policy>JS.ExtractDSUTokenVariables</Policy>
+        <Policy>JS.ExtractTokenRequestVariables</Policy>
+        <Policy>JS.FaultHandler</Policy>
+        <Policy>JS.RewriteUrl</Policy>
+        <Policy>KVM.GetDefaultTargetUrl</Policy>
+        <Policy>KVM.GetTarget</Policy>
+        <Policy>OA.AccessTokenRefresh</Policy>
+        <Policy>OA.GenerateAccessToken</Policy>
+        <Policy>OA.InvalidateAccessToken</Policy>
+        <Policy>OA.VerifyKeySecret</Policy>
+        <Policy>OA.VerifyToken</Policy>
+        <Policy>QU.SetQuota</Policy>
+        <Policy>RF.FaultInvalidContentType</Policy>
+        <Policy>RF.FaultInvalidEnvironment</Policy>
+        <Policy>RF.FaultInvalidparameters</Policy>
+        <Policy>RF.InvalidClientIP</Policy>
+        <Policy>RF.InvalidGrantType</Policy>
+        <Policy>RF.RefreshTokenExpired</Policy>
+        <Policy>RF.SiteKeyNotFound</Policy>
+        <Policy>RF.UnknownResource</Policy>
+        <Policy>SA.SpikeArrest</Policy>
+        <Policy>VAK.VerifyAPIKey</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://ConstructTokenResponse.js</Resource>
+        <Resource>jsc://ExtractDSUTokenVariables.js</Resource>
+        <Resource>jsc://ExtractTokenRequestVariables.js</Resource>
+        <Resource>jsc://FaultHandler.js</Resource>
+        <Resource>jsc://RewriteUrl.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>
