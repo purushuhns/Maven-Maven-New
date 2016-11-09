@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<SpikeArrest async="false" continueOnError="false" enabled="true" name="SA.SpikeArrest">
-    <DisplayName>SA.SpikeArrest</DisplayName>
-    <Properties/>
-    <Identifier ref="verifyapikey.VAK.VerifyAPIKey.client_id"/>
-    <Rate>30ps</Rate>
-</SpikeArrest>
